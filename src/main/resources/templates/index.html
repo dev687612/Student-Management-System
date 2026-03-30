@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student App - Welcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 600px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .success-message {
+            background-color: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+
+        .status-badge {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+
+        .endpoints {
+            text-align: left;
+            margin-top: 30px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .endpoints h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .endpoint-item {
+            background-color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border-left: 4px solid #667eea;
+            font-size: 0.95em;
+        }
+
+        .method {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-right: 10px;
+            min-width: 50px;
+        }
+
+        .link {
+            color: #667eea;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎉 Student Management App</h1>
+
+        <div class="success-message">
+            <p><strong>✅ Spring Boot is running successfully!</strong></p>
+            <p>Your Student Management API is ready to use.</p>
+        </div>
+
+        <div class="status-badge">Server Active - Ready</div>
+
+        <div class="endpoints">
+            <h3>📡 Available API Endpoints:</h3>
+
+            <div class="endpoint-item">
+                <span class="method">GET</span>
+                <strong><a href="/students" class="link">/students</a></strong>
+                <p style="margin-top: 5px; color: #666;">Get all students</p>
+            </div>
+
+            <div class="endpoint-item">
+                <span class="method">GET</span>
+                <strong>/students/{id}</strong>
+                <p style="margin-top: 5px; color: #666;">Get student by ID</p>
+            </div>
+
+            <div class="endpoint-item">
+                <span class="method">POST</span>
+                <strong>/students</strong>
+                <p style="margin-top: 5px; color: #666;">Add new student</p>
+            </div>
+
+            <div class="endpoint-item">
+                <span class="method">PUT</span>
+                <strong>/students/{id}</strong>
+                <p style="margin-top: 5px; color: #666;">Update student</p>
+            </div>
+
+            <div class="endpoint-item">
+                <span class="method">DELETE</span>
+                <strong>/students/{id}</strong>
+                <p style="margin-top: 5px; color: #666;">Delete student</p>
+            </div>
+        </div>
+
+        <p style="margin-top: 30px; color: #666; font-size: 0.9em;">
+            Use <strong>Postman</strong> or <strong>curl</strong> to test the API endpoints.<br>
+            <a href="/students" class="link" style="font-size: 1.1em; font-weight: bold;">→ View All Students</a>
+        </p>
+    </div>
+</body>
+
+</html>

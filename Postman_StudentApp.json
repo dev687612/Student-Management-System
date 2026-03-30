@@ -1,0 +1,174 @@
+{
+    "info": {
+        "_postman_id": "student-app-collection",
+        "name": "Student App API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Add Student 1 - John Doe",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"age\": 20\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/students",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "students"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Add Student 2 - Jane Smith",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"Jane Smith\",\n  \"email\": \"jane@example.com\",\n  \"age\": 21\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/students",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "students"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Add Student 3 - Mike Johnson",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"Mike Johnson\",\n  \"email\": \"mike@example.com\",\n  \"age\": 22\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/students",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "students"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get All Students",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/students",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "students"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Get Student by ID - 1",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/students/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "students",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Update Student 1",
+            "request": {
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"name\": \"John Updated\",\n  \"email\": \"john.updated@example.com\",\n  \"age\": 21\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/students/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "students",
+                        "1"
+                    ]
+                }
+            }
+        },
+        {
+            "name": "Delete Student 1",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/students/1",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "students",
+                        "1"
+                    ]
+                }
+            }
+        }
+    ]
+}

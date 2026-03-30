@@ -1,0 +1,228 @@
+{
+  "info": {
+    "name": "Spring Boot Student Application",
+    "description": "Complete API collection for testing Student Management REST APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Create Student (Success)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Alice Johnson\",\n  \"email\": \"alice@example.com\",\n  \"age\": 22\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["students"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2. Create Student (Invalid Email)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Bob Smith\",\n  \"email\": \"not-an-email\",\n  \"age\": 25\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["students"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3. Create Student (Age Below 18)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Young Student\",\n  \"email\": \"young@example.com\",\n  \"age\": 15\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["students"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4. Create Student (Missing Name)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"test@example.com\",\n  \"age\": 25\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["students"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5. Get All Students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/students",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["students"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "6. Get Student by ID (Success)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/students/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["students", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "7. Get Student by ID (Not Found)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/students/999",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["students", "999"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "8. Update Student (Success)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Alice Updated\",\n  \"email\": \"alice.updated@example.com\",\n  \"age\": 23\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/students/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["students", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "9. Update Student (Not Found)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Ghost Student\",\n  \"email\": \"ghost@example.com\",\n  \"age\": 25\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/students/999",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["students", "999"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "10. Delete Student (Success)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/students/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["students", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "11. Delete Student (Not Found)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/students/999",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["students", "999"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
